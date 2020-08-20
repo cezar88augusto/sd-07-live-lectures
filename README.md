@@ -14,7 +14,7 @@ Em seguida acessar a branch do Pull Request da aula seguindo o padrão de nomecl
 
 Exemplo:
 ```sh
-git checkout aula-ao-vivo
+git checkout nome-branch-aula-ao-vivo
 ```
 
 ---
