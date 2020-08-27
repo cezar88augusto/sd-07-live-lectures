@@ -31,7 +31,7 @@ let isEven = ((num1 + num2) % 2 ) == 0
 console.log(isEven);
 
 // E o num1 + num2 + num3?
-isEven = ((num1 + num2 + num3) % 2 ) == 0
+isEven = ((num1 + num2 + num3) % 2 ) == "0"
 
 console.log(isEven);
 
@@ -53,10 +53,10 @@ switch(weekDay) {
     case 4:
         console.log("Quarta-feira")
         break;
-    case 5:
+    case 6:
         console.log("Quinta-feira")
         break;
-    case 6:
+    case 5:
         console.log("Dia de maldade")
         break;
     case 7:
