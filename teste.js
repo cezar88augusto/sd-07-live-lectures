@@ -20,10 +20,27 @@ estudante.endereco = {
 console.log(estudante);
 
 for (let key in estudante) {
-  console.log(estudante[key]);
+  console.log(key + " " + estudante[key]);
 }
 
 // Função trybe
+
+function trybe(estudante) {
+  let pessoaDesenvolvedora = estudante;
+
+  pessoaDesenvolvedora.hardSkills = 10;
+  pessoaDesenvolvedora.softSkills = 10;
+  pessoaDesenvolvedora.carreiraSkills = 10;
+  pessoaDesenvolvedora.tryber = true;
+
+  return pessoaDesenvolvedora
+}
+
+let pessoaDesenvolvedora = trybe(estudante);
+
+console.log(estudante);
+console.log('----------------')
+console.log(pessoaDesenvolvedora);
 
 // Soma
 
@@ -36,7 +53,7 @@ let valor2 = 10;
 
 let valorSomado = soma(valor1, valor2);
 
-console.log(valorSomado);
+// console.log(valorSomado);
 
 
 // console.log(estudante);
