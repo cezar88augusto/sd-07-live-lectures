@@ -71,13 +71,19 @@
     <p class="main-description">
       Ensinar métodos para manipular HTML através de JavaScript
     </p>
-    <div id="first" class="main-box"></div>
+    <div id="first" class="main-box">
+      Olá mundo
+    </div>
     <div id="second" class="main-box"></div>
     <div id="third" class="main-box"></div>
     <script>
       function createCustomElement(classes) {
+        //classes => ['red', 'square', 'small']
         let element = document.createElement('div');
         element.className = classes.join(' ');
+        //'red square small'
+
+        // element => <div class="red square small"></div>
         return element;
       }
 
@@ -120,12 +126,20 @@
           shape: 'circle',
           size: 'small',
         },
+        {
+          color: 'red',
+          shape: 'circle',
+          size: 'small',
+        },
       ];
 
+      // Pegando a primeira div
       let first = document.querySelector('#first');
 
       for (let i = 0; i < features.length; i += 1) {
+        // Colocando a feature - objeto em uma variável
         let feature = features[i];
+
         let element = createCustomElement([feature.color, feature.shape, feature.size]);
         first.appendChild(element);
       }
