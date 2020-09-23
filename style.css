@@ -206,4 +206,12 @@ footer ul {
   .know-the-hotel .grid li.large {
     flex-basis: 100%;
   }
+
+  .features .grid {
+    flex-direction: column;
+  }
+
+  footer ul li {
+    font-size: xx-large;
+  }
 }
