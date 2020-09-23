@@ -27,7 +27,6 @@ header {
   position: absolute;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -52,12 +51,10 @@ header a {
 }
 
 .hero h1 {
-  font-size: 3.2rem;
   margin-bottom: 15px;
 }
 
 .hero h3 {
-  font-size: 2rem;
   margin-bottom: 15px;
 }
 
@@ -96,6 +93,10 @@ header a {
   flex-wrap: wrap;
 }
 
+ul {
+  list-style: none;
+}
+
 .know-the-hotel .grid li {
   height: 350px;
   padding: 20px;
@@ -103,18 +104,6 @@ header a {
   background-clip: content-box;
   background-size: cover;
   background-position: center;
-}
-
-.know-the-hotel .grid li.small {
-  flex-basis: 40%;
-}
-
-.know-the-hotel .grid li.large {
-  flex-basis: 60%;
-}
-
-ul {
-  list-style: none;
 }
 
 .features {
@@ -182,6 +171,31 @@ footer ul {
   margin-bottom: 25px;
 }
 
+/* Regra de estilo para telas maiores que 680 */
+@media screen and (min-width: 680px) {
+  
+  header {
+    justify-content: space-between;
+  }
+  
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+  
+  .hero h3 {
+    font-size: 2rem;
+  }
+  
+  .know-the-hotel .grid li.small {
+    flex-basis: 40%;
+  }
+  
+  .know-the-hotel .grid li.large {
+    flex-basis: 60%;
+  }
+}
+
+/* Regra de estilo para telas menores que 680 */
 @media screen and (max-width: 680px) {
   header nav {
     display: none;
