@@ -7,7 +7,7 @@ const users = [
 ];
 
 const everyPersonCanDrive = users.every((user) => {
-  return user.isDriver === true;
+  return user.isDriver === false;
 });
 
 console.log(everyPersonCanDrive);
