@@ -25,4 +25,5 @@ console.table(tocantinsCities);
 // 3. Encontre todas as cidades que comece com a letra B
 console.log("As cidades que começam com a letra B são:")
 const citiesThatStartWithB = cities.filter(city => city.name.startsWith("B") );
+// const citiesThatStartWithB = cities.filter(city => city.name[0] === "B" ); PODE SER FEITO DESSA FORMA TAMBEM :)
 console.table(citiesThatStartWithB);

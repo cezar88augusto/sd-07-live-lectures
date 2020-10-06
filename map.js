@@ -33,12 +33,24 @@ const cities = [
 // 1. Transforme o array de objetos cities em um array de strings com o seguinte formato:
 // a) "${nomeDaCidade} - ${siglaDoEstado}"
 console.log("Formato: ${nomeDaCidade} - ${siglaDoEstado}");
+const citiesAndStatesInitials = cities.map((city) => `${city.name} - ${city.state}` );
+console.log(citiesAndStatesInitials);
+
+// a.2) Usando forEach: "${nomeDaCidade} - ${siglaDoEstado}"
+console.log("Formato Usando forEach: ${nomeDaCidade} - ${siglaDoEstado}");
+let citiesAndStatesInitials2 = [];
+cities.forEach((city) => {
+  citiesAndStatesInitials2.push(`${city.name} - ${city.state}`);
+});
+console.log(citiesAndStatesInitials2);
 
 // b) "A cidade de ${nomeDaCidade} fica no estado de ${nomeDoEstado}"
 console.log("Formato: A cidade de ${nomeDaCidade} fica no estado de ${nomeDoEstado}");
-
-// c) "A cidade de ${nomeDaCidade} fica na região ${nomeDaRegião}"
-console.log("Formato: A cidade de ${nomeDaCidade} fica na região ${nomeDaRegião}");
+const citiesAndStateNames = cities.map((city) => {
+  const stateInfo = states.find((state) => state.short === city.state );
+  return `A cidade de ${city.name} fica no estado de ${stateInfo.name}`;
+});
+console.log(citiesAndStateNames);
 
 // 2. Transforme o array de objeto cities em um array de objetos do seguinte formado:
 // {
@@ -52,3 +64,16 @@ console.log(`Formato:
   city: "Manaus",
   region: "Norte"
 }`);
+
+const citiesInfo = cities.map((city) => {
+  const stateInfo = states.find((state) => state.short === city.state );
+  const regionInfo = regions.find((region) => {
+    return region.short === city.region
+  });
+  return {
+    "state": stateInfo.name,
+    "city": city.name,
+    "region": regionInfo.name
+  };
+});
+console.log(citiesInfo);
