@@ -7,7 +7,10 @@ const players = [
   { fullName: 'Túlio Maravilha', email: 'deputado@futebol.br' },
 ];
 
-const newPlayers = players.reduce();
+const newPlayers = players.reduce((accumulator, currentValue) => {
+  accumulator[currentValue.fullName] = currentValue.email;
+  return accumulator;
+}, {});
 
 const expectedValue = {
   'Adriano Imperador': 'didico@futebol.br',

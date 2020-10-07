@@ -12,7 +12,8 @@ for (let index = 1; index < numbers.length; index += 1) {
 // 1. Reduce é uma função de alta ordem => HoF
 // 2. Ele recebe como primeiro parametro, uma callback
 // 3. O valor de previousValue será sempre o que for retornado anteriormente
-// 3.1. A primeira vez que a função callback é executada, o previousValue assumo o valor do primeiro elemento do array
+// 3.1. A primeira vez que a função callback é executada, o previousValue assume o valor do primeiro elemento do array, CASO não tenha nenhum valor inicial
+// 3.2. A primeira vez que função callback é executada, o previousValue assumo o valor do initialValue caso tenha.
 // 4. O currentValue tras o valor corrente de cada iteração do array
 const sumWithReduce = numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
 
