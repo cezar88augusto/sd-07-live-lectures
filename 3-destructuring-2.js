@@ -29,7 +29,10 @@ const polarBear = {
   }
 };
 
-// ...
+const animalDescription = ({ name, commonName, weightRange }) => {
+  const { min, max, measurementUnit = "kg" } = weightRange;
+  return `${commonName} (${name}) weighs around ${min}-${max} ${measurementUnit}`;
+}
 
 assert.strictEqual(
   animalDescription(lion),
@@ -43,3 +46,7 @@ assert.strictEqual(
   animalDescription(polarBear),
   'Polar Bear (Ursus maritimus) weighs around 350-700 kg'
 );
+
+let array = ["Jorge", "Alves", "Silva", "Sales"];
+let array2 = ["Jorge", "Alves", "Silva", "Sales"];
+const [ firstValue, _, ...rest ] = array;

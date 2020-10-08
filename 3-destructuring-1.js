@@ -7,7 +7,12 @@ const richestDuckInTheWorld = {
   jobs: ['Shoe shiner', 'Sailor', 'Cowboy', 'Miner', 'Banker', 'Entrepreneur']
 };
 
+// const name = richestDuckInTheWorld.name;
+// const birthplace = richestDuckInTheWorld.birthplace;
+
+const { name: duckName, birthplace } = richestDuckInTheWorld;
+
 assert.strictEqual(
-  `${richestDuckInTheWorld.name} from ${richestDuckInTheWorld.birthplace}`,
+  `${duckName} from ${birthplace}`,
   'Scrooge McDuck from Glasgow, Scotland'
 );
