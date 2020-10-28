@@ -1,38 +1,62 @@
 const convertToRoman = require('./roman-numerals');
-const assert = require('assert');
 
-assert.strictEqual(convertToRoman(1), 'I');
-assert.strictEqual(convertToRoman(2), 'II');
-assert.strictEqual(convertToRoman(3), 'III');
-assert.strictEqual(convertToRoman(4), 'IV');
+describe('convert numbers from 1 to 4', () => {
+  test('if convertToRoman using 1 returns "I"', () => {
+    expect(convertToRoman(1)).toBe('I');
+  });
+  
+  test('if convertToRoman using 2 returns "II"', () => {
+    expect(convertToRoman(2)).toBe('II');
+  });
 
-assert.strictEqual(convertToRoman(5), 'V');
-assert.strictEqual(convertToRoman(6), 'VI');
-assert.strictEqual(convertToRoman(7), 'VII');
-assert.strictEqual(convertToRoman(8), 'VIII');
-assert.strictEqual(convertToRoman(9), 'IX');
+  test('if convertToRoman using 3 returns "III"', () => {
+    expect(convertToRoman(3)).toBe('III');
+  });
 
-assert.strictEqual(convertToRoman(10), 'X');
-assert.strictEqual(convertToRoman(11), 'XI');
-assert.strictEqual(convertToRoman(12), 'XII');
-assert.strictEqual(convertToRoman(13), 'XIII');
-assert.strictEqual(convertToRoman(14), 'XIV');
-assert.strictEqual(convertToRoman(15), 'XV');
-assert.strictEqual(convertToRoman(26), 'XXVI');
-assert.strictEqual(convertToRoman(43), 'XLIII');
+  test('if convertToRoman using 4 returns "IV"', () => {
+    expect(convertToRoman(4)).toBe('IV');
+  });
+});
 
-assert.strictEqual(convertToRoman(50), 'L');
-assert.strictEqual(convertToRoman(55), 'LV');
-assert.strictEqual(convertToRoman(76), 'LXXVI');
+test('converts numbers from 5 to 9', () => {
+  expect(convertToRoman(5)).toBe('V');
+  expect(convertToRoman(6)).toBe('VI');
+  expect(convertToRoman(7)).toBe('VII');
+  expect(convertToRoman(8)).toBe('VIII');
+  expect(convertToRoman(9)).toBe('IX');
+});
 
-assert.strictEqual(convertToRoman(100), 'C');
-assert.strictEqual(convertToRoman(200), 'CC');
-assert.strictEqual(convertToRoman(227), 'CCXXVII');
+test('converts numbers from 10 to 15, 26 and 43', () => {
+  expect(convertToRoman(10)).toBe('X');
+  expect(convertToRoman(11)).toBe('XI');
+  expect(convertToRoman(12)).toBe('XII');
+  expect(convertToRoman(13)).toBe('XIII');
+  expect(convertToRoman(14)).toBe('XIV');
+  expect(convertToRoman(15)).toBe('XV');
+  expect(convertToRoman(26)).toBe('XXVI');
+  expect(convertToRoman(43)).toBe('XLIII');
+});
 
-assert.strictEqual(convertToRoman(500), 'D');
-assert.strictEqual(convertToRoman(576), 'DLXXVI');
-assert.strictEqual(convertToRoman(981), 'CMLXXXI');
+test('converts numbers 50, 55 and 76', () => {
+  expect(convertToRoman(50)).toBe('L');
+  expect(convertToRoman(55)).toBe('LV');
+  expect(convertToRoman(76)).toBe('LXXVI');
+});
 
-assert.strictEqual(convertToRoman(1000), 'M');
-assert.strictEqual(convertToRoman(2999), 'MMCMXCIX');
-assert.strictEqual(convertToRoman(3000), 'MMM');
+test('converts numbers 100, 200 and 227', () => {
+  expect(convertToRoman(100)).toBe('C');
+  expect(convertToRoman(200)).toBe('CC');
+  expect(convertToRoman(227)).toBe('CCXXVII');
+});
+
+test('converts numbers 500, 576 and 981', () => {
+  expect(convertToRoman(500)).toBe('D');
+  expect(convertToRoman(576)).toBe('DLXXVI');
+  expect(convertToRoman(981)).toBe('CMLXXXI');
+});
+
+test('converts numbers 1000, 2999 and 3000', () => {
+  expect(convertToRoman(1000)).toBe('M');
+  expect(convertToRoman(2999)).toBe('MMCMXCIX');
+  expect(convertToRoman(3000)).toBe('MMM');
+});
