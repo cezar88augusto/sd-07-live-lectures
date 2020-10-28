@@ -1,7 +1,6 @@
 const convertToRoman = require('./roman-numerals');
 const assert = require('assert');
 
-assert.strictEqual(typeof convertToRoman, 'function');
 assert.strictEqual(convertToRoman(1), 'I');
 assert.strictEqual(convertToRoman(2), 'II');
 assert.strictEqual(convertToRoman(3), 'III');
