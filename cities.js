@@ -4,11 +4,13 @@ function getCities() {
   return cities;
 }
 
+// Simula uma requisição síncrona, onde capturamos informacoes de cache, de forma síncrona
 function retrieveCitiesFromCache() {
   cities.push("Fortaleza");
   cities.push("Belo Horizonte");
 }
 
+// Simula uma requisição assincrona, onde fazemos um request em um endpoint e recuperamos cidades
 function requestCities() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
