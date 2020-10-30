@@ -1,8 +1,6 @@
-const { expect, afterEach } = require("@jest/globals");
-const { default: fetch } = require("node-fetch");
 let { fetchDog } = require("./fetch-dog");
 
-describe('', () => {
+describe('testing fetchDog implementation', () => {
   fetchDog = jest.fn();
 
   afterEach(() => {
@@ -23,7 +21,7 @@ describe('', () => {
     fetchDog.mockRejectedValue('request failed');
 
     expect(fetchDog()).rejects.toBe('request failed');
-    expect(fetchDog).toHaveBeenCalledTimes(3);
+    expect(fetchDog).toHaveBeenCalledTimes(1);
   });
 
 });
