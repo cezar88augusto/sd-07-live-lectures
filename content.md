@@ -68,7 +68,7 @@ import { render,
          cleanup,
          fireEvent,
          waitForDomChange } from '@testing-library/react';
-import App from './App';
+import MeuComponente from './MeuComponente';
 
 describe('Minha suite de testes', () => {
   test('Meu teste', async () => {
@@ -77,7 +77,7 @@ describe('Minha suite de testes', () => {
 
     await waitForDomChange();
 
-    fireEvent(queryByTestId('meuBotão'))
+    fireEvent.click(queryByTestId('meuBotão'))
 
     await waitForDomChange();
 
